@@ -45,11 +45,12 @@
       </form>  
     </div> -->
   </div>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script>
     $(document).ready(function() {
       $.ajax({
-        url: "https://jsonplaceholder.typicode.com/posts",
+        url: "json/my.json",
         type: "GET",
         success: function(data) {
           $.each(data, function(key, value) {
