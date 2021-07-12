@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>PHP & JSON File</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div id="main">
     <div id="header">
@@ -45,20 +47,19 @@
   </div>
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
       $.ajax({
-        url : "https://jsonplaceholder.typicode.com/posts",
+        url: "https://jsonplaceholder.typicode.com/posts",
         type: "GET",
-        success : function(data){
-          // console.log(data.id+" "+data.title);
-          $.each(data,function(key,value){
-            $("#load-data").append(value.id+" "+value.title+"<br>");
+        success: function(data) {
+          $.each(data, function(key, value) {
+            $("#load-data").append(value.id + " " + value.title + "<br>");
           });
         }
-
       });
     });
   </script>
 
 </body>
+
 </html>
