@@ -51,8 +51,9 @@
       $.ajax({
         url: "json/my.json",
         type: "GET",
+        dataType :"JSON",
         success: function(data) {
-          $.each(JSON.parse(data), function(key, value) {
+          $.each(data, function(key, value) {
             $("#load-data").append(value.id + " " + value.title + "<br>");
           });
         }
