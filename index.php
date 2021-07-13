@@ -17,8 +17,6 @@
     <div id="load-data">
     </div>
 
-
-
     <!-- <div id="table-data">
       <form id="submit_form" method="post" action="save-form.php">  
         <table width="100%" cellpadding="10px">
@@ -44,6 +42,7 @@
         </table>
       </form>  
     </div> -->
+    
   </div>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
   <script type="text/javascript" src="js/jQuery.js"></script>
@@ -53,14 +52,12 @@
         url: "json/my.json",
         type: "GET",
         success: function(data) {
-          $.each(data, function(key, value) {
+          $.each(JSON.parse(data), function(key, value) {
             $("#load-data").append(value.id + " " + value.title + "<br>");
           });
         }
       });
     });
   </script>
-
 </body>
-
 </html>
